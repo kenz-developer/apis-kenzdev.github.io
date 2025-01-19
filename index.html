@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Interaction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, button {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>API Interaction</h1>
+
+  <!-- GET API -->
+  <h2>GET Request</h2>
+  <button id="getButton">Fetch Data</button>
+  <div id="getResult" style="margin-top: 10px; background: #f4f4f4; padding: 10px; border: 1px solid #ccc;"></div>
+
+  <!-- POST API -->
+  <h2>POST Request</h2>
+  <form id="postForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+    <button type="submit">Send Data</button>
+  </form>
+  <div id="postResult" style="margin-top: 10px; background: #f4f4f4; padding: 10px; border: 1px solid #ccc;"></div>
+
+  <script>
+    const apiBaseUrl = "https://kenzdeveloper-gacor.biz.id";
+
+    // Handle GET Request
+    document.getElementById("getButton").addEventListener("click", () => {
+      fetch(apiBaseUrl + "/api/get")
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("getResult").innerText = JSON.stringify(data, null, 2);
+        })
+        .catch(err => {
+          document.getElementById("getResult").innerText = "Error: " + err.message;
+        });
+    });
+
+    // Handle POST Request
+    document.getElementById("postForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+
+      fetch(apiBaseUrl + "/api/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, age })
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("postResult").innerText = JSON.stringify(data, null, 2);
+        })
+        .catch(err => {
+          document.getElementById("postResult").innerText = "Error: " + err.message;
+        });
+    });
+  </script>
+</body>
+</html>
