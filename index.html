@@ -3,34 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website KenzDev</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Biodata Saya</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Background for particles -->
-  <div id="particles-js"></div>
+  <div class="container">
+    <!-- Profil Section -->
+    <div class="profile">
+      <img src="images/profile.jpg" alt="Foto Profil" class="profile-img">
+      <h1 class="name">KenzDeveloper</h1>
+      <p class="bio">Saya adalah seorang [pekerjaan/profesi] yang antusias dalam [deskripsi singkat, seperti teknologi, seni, dll]. Saya senang berbagi pengalaman dan terus belajar hal-hal baru.</p>
+    </div>
 
-  <!-- Parallax content -->
-  <div class="parallax">
-    <h1>Selamat Datang</h1>
-    <p>Ini Website Kecil.</p>
+    <!-- Info Section -->
+    <div class="info">
+      <h2>Tentang Saya</h2>
+      <p>
+        Halo, nama saya <strong>[Nama Lengkap]</strong>. Saya lahir pada [tanggal lahir] dan saat ini tinggal di [lokasi]. Dalam waktu luang, saya suka [hobi seperti membaca, coding, olahraga, dll]. 
+      </p>
 
-    <!-- Social media buttons -->
-    <div class="social-buttons">
-      <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-whatsapp">
+      <h2>Pengalaman</h2>
+      <ul>
+        <li><strong>[Tahun]</strong> - [Posisi Pekerjaan di Perusahaan]</li>
+        <li><strong>[Tahun]</strong> - [Posisi Pekerjaan di Perusahaan]</li>
+        <li><strong>[Tahun]</strong> - [Proyek Freelance atau Karya Penting]</li>
+      </ul>
+
+      <h2>Hobi</h2>
+      <p>Saya sangat menikmati [daftar hobi seperti bermain musik, melukis, mendaki, dll].</p>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="social-links">
+      <h2>Hubungi Saya</h2>
+      <a href="https://wa.me/6281234567890" target="_blank" class="social-btn whatsapp">
         <i class="fa-brands fa-whatsapp"></i> WhatsApp
       </a>
-      <a href="https://instagram.com/yourusername" target="_blank" class="btn btn-instagram">
+      <a href="https://instagram.com/yourusername" target="_blank" class="social-btn instagram">
         <i class="fa-brands fa-instagram"></i> Instagram
       </a>
-      <a href="https://facebook.com/yourusername" target="_blank" class="btn btn-facebook">
-        <i class="fa-brands fa-facebook"></i> Facebook
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn linkedin">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/yourusername" target="_blank" class="social-btn github">
+        <i class="fa-brands fa-github"></i> GitHub
       </a>
     </div>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
